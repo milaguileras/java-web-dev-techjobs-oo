@@ -15,12 +15,14 @@ public class JobTest {
     Job test1;
     Job test2;
     Job test3;
+    Job test4;
 
     @Before
     public void JobObject(){
         test1 = new Job();
         test2 = new Job();
-        test3= new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        test3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        test4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
     @Test
@@ -32,4 +34,10 @@ public class JobTest {
     public void testJobConstructorSetsAllFields(){
         assertTrue(test3 instanceof Job);
     }
+
+    @Test
+    public void testJobsForEquality(){
+        assertNotEquals(test3, test4);
+    }
+
 }
