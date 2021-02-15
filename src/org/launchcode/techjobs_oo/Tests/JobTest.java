@@ -16,6 +16,7 @@ public class JobTest {
     Job test2;
     Job test3;
     Job test4;
+    Job test5;
 
     @Before
     public void JobObject(){
@@ -23,6 +24,7 @@ public class JobTest {
         test2 = new Job();
         test3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         test4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        test5 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
     }
 
     @Test
@@ -38,6 +40,11 @@ public class JobTest {
     @Test
     public void testJobsForEquality(){
         assertNotEquals(test3, test4);
+    }
+
+    @Test
+    public void testToString(){
+        assertTrue(test5.toString().startsWith("\n"));
     }
 
 }

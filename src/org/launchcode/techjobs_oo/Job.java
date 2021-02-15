@@ -1,7 +1,5 @@
 package org.launchcode.techjobs_oo;
 
-import java.util.Objects;
-
 public class Job {
 
     private int id;
@@ -34,25 +32,42 @@ public class Job {
         aCoreCompetency = coreCompetency;
     }
 
-    // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
-    //  match.
+    public String toString(){
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Job)) return false;
-        Job job = (Job) o;
-        return id == job.id;
+        String str;
+
+        if(getName().equals("") && getEmployer().getValue().equals("") && getLocation().getValue().equals("") && getPositionType().getValue().equals("") && getCoreCompetency().getValue().equals("")){
+            return "Oops! This job does not seem to exist.";
+        }
+
+        if(getName().equals("")){
+            this.name = "Data not available";
+        }
+        if(getEmployer().getValue().equals("")){
+            this.employer = new Employer("Data not available";)
+        }
+        if(getLocation().getValue().equals("")){
+            this.location = new Location("Data not available");
+        }
+        if(getPositionType().getValue().equals("")){
+            this.positionType = new PositionType("Data not available");
+        }
+        if(getCoreCompetency().getValue().equals("")){
+            this.coreCompetency = new CoreCompetency("Data not available");
+        }
+
+
+        str = "\nID : " + getId() +
+                "\nName : " + getName() +
+                "\nEmployer : " + getEmployer() +
+                "\nLocation : " + getLocation() +
+                "\nPosition Type : " + getPositionType() +
+                "\nCore Competency : " + getCoreCompetency();
+
+        return str;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 
-
-    // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
-    //  and id.
 
     public void setName(String name) {
         this.name = name;
