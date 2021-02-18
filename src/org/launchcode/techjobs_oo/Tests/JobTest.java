@@ -52,12 +52,12 @@ public class JobTest {
 
     @Test
     public void toStringReturnsAllLabels(){
-        assertTrue(test4.toString().contains("ID : "));
-        assertTrue(test4.toString().contains("Name : "));
-        assertTrue(test4.toString().contains("Employer : "));
-        assertTrue(test4.toString().contains("Location : "));
-        assertTrue(test4.toString().contains("Position Type : "));
-        assertTrue(test4.toString().contains("Core Competency : "));
+        assertTrue(test4.toString().contains("ID: "));
+        assertTrue(test4.toString().contains("Name: "));
+        assertTrue(test4.toString().contains("Employer: "));
+        assertTrue(test4.toString().contains("Location: "));
+        assertTrue(test4.toString().contains("Position Type: "));
+        assertTrue(test4.toString().contains("Core Competency: "));
     }
 
     @Test
@@ -71,21 +71,6 @@ public class JobTest {
     }
 }
 
-    /*
-    @Test
-     public void testToString(){
-         assertEquals("", test1.toString());
-     }
 
-     //@Test
-     //public void testToStringFinishesEmpty(){
-     //    assertTrue(test5.toString().endsWith("\n"));
-     //}
-
-     @Test
-     public void testJobEmployerNotAvailable(){
-         assertTrue(test5.toString().contains("Oops! This job does not seem to exist."));
-     }
-    */
 
 

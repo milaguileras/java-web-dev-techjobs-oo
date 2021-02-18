@@ -33,11 +33,12 @@ public class Job extends JobField{
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
         Job job = (Job) o;
-        return getId() == job.getId() && Objects.equals(getName(), job.getName()) && Objects.equals(getEmployer(), job.getEmployer()) && Objects.equals(getLocation(), job.getLocation()) && Objects.equals(getPositionType(), job.getPositionType()) && Objects.equals(getCoreCompetency(), job.getCoreCompetency());
+        return getId() == job.getId();
     }
 
-    public boolean isBlank() {
-        return false;
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getEmployer(), getLocation(), getPositionType(), getCoreCompetency());
     }
 
     @Override
@@ -70,18 +71,14 @@ public class Job extends JobField{
             this.coreCompetency = new CoreCompetency("Data not available");
         }
 
-        str = "\nID : " + getId() +
-                "\nName : " + getName() +
-                "\nEmployer : " + getEmployer() +
-                "\nLocation : " + getLocation() +
-                "\nPosition Type : " + getPositionType() +
-                "\nCore Competency : " + getCoreCompetency() + "\n";
+        str = "\nID: " + getId() +
+                "\nName: " + getName() +
+                "\nEmployer: " + getEmployer() +
+                "\nLocation: " + getLocation() +
+                "\nPosition Type: " + getPositionType() +
+                "\nCore Competency: " + getCoreCompetency() + "\n";
 
         return str;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getId() {
@@ -90,6 +87,10 @@ public class Job extends JobField{
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Employer getEmployer() {
