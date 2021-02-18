@@ -17,6 +17,10 @@ public class CoreCompetency {
         this.value = value;
     }
 
+    public boolean isBlank() {
+        return false;
+    }
+
     // Custom toString, equals, and hashCode methods:
 
     @Override

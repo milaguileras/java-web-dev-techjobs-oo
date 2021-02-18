@@ -17,10 +17,14 @@ public class Employer {
         this.value = value;
     }
 
+    public boolean isBlank() {
+        return false;
+    }
     // Custom toString, equals, and hashCode methods:
 
     @Override
     public String toString() {
+
         return value;
     }
 

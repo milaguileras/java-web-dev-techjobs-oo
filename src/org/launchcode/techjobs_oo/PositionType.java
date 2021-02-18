@@ -17,6 +17,10 @@ public class PositionType {
         this.value = value;
     }
 
+    public boolean isBlank() {
+        return false;
+    }
+
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
 
     @Override
