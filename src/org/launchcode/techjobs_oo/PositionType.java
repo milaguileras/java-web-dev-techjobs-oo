@@ -1,24 +1,13 @@
 package org.launchcode.techjobs_oo;
 import java.util.Objects;
 
-public class PositionType {
+public class PositionType extends JobField {
 
-    public boolean isBlank() {
-        return false;
+    public PositionType() {
     }
 
-
-    // Getters and Setters:
-
-    public int getId() {
-        return id;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
+    public PositionType(String value){
+            super(value);
     }
 }
+
