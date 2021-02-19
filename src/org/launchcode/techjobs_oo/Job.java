@@ -54,20 +54,20 @@ public class Job extends JobField{
             return "Oops! This job does not seem to exist.";
         }
 
-        if(getName().equals("")){
+        if(name.equals("")){
             this.name = "Data not available";
             System.out.println(name);
         }
-        if(getEmployer().equals("")){
+        if(employer.getValue().equals("")){
             this.employer = new Employer("Data not available");
         }
-        if(getLocation().equals("")){
+        if(location.getValue().equals("")){
             this.location = new Location("Data not available");
         }
-        if(getPositionType().equals("")){
+        if(positionType.getValue().equals("")){
             this.positionType = new PositionType("Data not available");
         }
-        if(getCoreCompetency().equals("")){
+        if(coreCompetency.getValue().equals("")){
             this.coreCompetency = new CoreCompetency("Data not available");
         }
 

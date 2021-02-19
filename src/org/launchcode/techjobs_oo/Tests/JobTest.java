@@ -26,7 +26,7 @@ public class JobTest {
         test3 = new Job("Tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         test4 = new Job("Tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         test5 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
-        test6 = new Job("", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        test6 = new Job("AA", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
     }
 
